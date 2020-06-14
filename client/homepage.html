@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  <div>
+    <video autoplay id="me"></video>
+    <video autoplay id="you"></video>
+  </div>
+ 
+
+  <div>
+    Accept a call:
+    <button id="acceptCall">Accept</button>
+  </div>
+  <div>
+    Start a call:
+    <button id="startCallButton">Start</button>
+  </div>
+  <canvas id="screenshot"></canvas>
+  <button id="screenshotButton">Snap a pic!</button>
+</body>
+
+<script type="module"src="rtc.js"></script>
+
+</html>
