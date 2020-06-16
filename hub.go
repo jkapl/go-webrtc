@@ -1,18 +1,18 @@
 package main
 
 type Hub struct {
-	clients map[*Client]bool
+	clients map[*websocket.Conn]bool
 	broadcast chan []byte
-	register chan *Client
-	unregister chan *Client
+	register chan *websocket.Conn
+	unregister chan *websocket.Conn
 }
 
 func newHub() *Hub {
 	return &Hub{
-		clients: make(map[*Client]bool)
+		clients: make(map[*websocket.Conn]bool)
 		broadcast: make(chan []byte)
-		register: make(chan *Client)
-		unregister: make(chan *Client)
+		register: make(chan *websocket.Conn)
+		unregister: make(chan *websocket.Conn)
 	}
 }
 

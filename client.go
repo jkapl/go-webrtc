@@ -12,5 +12,6 @@ var upgrader = websocket.Upgrader{
 }
 
 type Client struct {
-	hub
+	conn *websocket.Conn
 }
+
